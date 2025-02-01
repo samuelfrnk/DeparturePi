@@ -33,7 +33,7 @@ As an underlying API the [opendata Transport API](https://transport.opendata.ch/
 
 ### Screen 
 
-Connecting the screen to the Pi was difficult. Many tutorials were not helpful. [This Reddit](https://www.reddit.com/r/raspberry_pi/comments/1bnav0y/i_finally_have_the_35inch_gpio_spi_lcd_working/) post then gave the right instructions.
+Connecting the screen to the Pi was difficult. Many tutorials were not helpful. [This Reddit](https://www.reddit.com/r/raspberry_pi/comments/1bnav0y/i_finally_have_the_35inch_gpio_spi_lcd_working/) post then gave the right [instructions](Instructions/Screen.txt).
 
 
 
