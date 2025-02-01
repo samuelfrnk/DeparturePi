@@ -35,6 +35,16 @@ As an underlying API the [opendata Transport API](https://transport.opendata.ch/
 
 Connecting the screen to the Pi was difficult. Many tutorials were not helpful. [This Reddit](https://www.reddit.com/r/raspberry_pi/comments/1bnav0y/i_finally_have_the_35inch_gpio_spi_lcd_working/) post then gave the right [instructions](Instructions/Screen.txt).
 
+### Scripts 
+
+1. [This script](Scripts/departureBoardWithMin.py) performs a request every 15 seconds and displays the departures in minutes (e.g., 5') until departure. 
+2. [This script](Scripts/departureBoardWithMin.py) performs a request every 30 seconds and displays the departures in timestamps (e.g., 18:30) until departure.
+
+
+
+
+
+
 
 
 
