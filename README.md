@@ -51,3 +51,5 @@ Connecting the screen to the Pi was difficult. Many tutorials were not helpful. 
 
 
 
+
+
