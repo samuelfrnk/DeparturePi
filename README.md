@@ -31,6 +31,10 @@ In order to have all the hardware packed in a handy way, a case was chosen which
 
 As an underlying API the [opendata Transport API](https://transport.opendata.ch/docs.html) was used. It provides an endoint which affords to query for an ID according to every bus and trainstation within Switzerland.
 
+### Screen 
+
+Connecting the screen to the Pi was difficult. Many tutorials were not helpful. [This Reddit](https://www.reddit.com/r/raspberry_pi/comments/1bnav0y/i_finally_have_the_35inch_gpio_spi_lcd_working/) post then gave the right instructions.
+
 
 
 
