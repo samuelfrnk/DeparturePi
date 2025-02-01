@@ -6,7 +6,7 @@ This Repository Contains the software for creating a departure board for any tra
 ## Setup 
 
 1. Connect the screen with the Raspberry Pi ([instructions](Instructions/Screen.txt))
-2. Paste [one of the scripts](Scripts) into a directory on the Pi.
+2. Paste one of [the scripts](Scripts) into a directory on the Pi.
 3. Set the environment variable 'STATION_ID' towards the value of the ID corresponding to the desired station (GET http://transport.opendata.ch/v1/locations?query=Basel helps to identify the ID).
 4. Create a cronjob: `@reboot sleep 120 && export STATION_ID="desired ID" && /usr/bin/python3 /home/pi/path/to/depBoardMin.py >> /home/pi/cron.log 2>&1` such that the board boots at start up of the Pi.
  
