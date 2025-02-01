@@ -25,6 +25,17 @@ In order to have all the hardware packed in a handy way, a case was chosen which
 <img src="https://github.com/user-attachments/assets/943d5809-fa1b-480e-9261-cd4498d070c5" width="350">
 
 
+## Software
+
+### API 
+
+As an underlying API the [opendata Transport API](https://transport.opendata.ch/docs.html) was used. It provides an endoint which affords to query for an ID according to every bus and trainstation within Switzerland.
+
+
+
+
+
+
 
 
 
