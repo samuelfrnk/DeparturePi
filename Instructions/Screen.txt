@@ -1,0 +1,66 @@
+This instruction has been provided by Gravy008 in the following Reddit Post : 
+https://www.reddit.com/r/raspberry_pi/comments/1bnav0y/i_finally_have_the_35inch_gpio_spi_lcd_working/
+
+1)fresh install of RPI OS bookworm (Expand file system -> reboot -> and then run sudo rpi-update)
+
+2)sudo raspi-config
+
+Advanced -> change wayland to X11
+
+Interface-> SPI - enable
+
+3) in the terminal type
+
+sudo nano /boot/firmware/config.txt
+
+Add a "#" in front of the line "dtoverlay=vc4-kms-v3d"
+
+add this line at the end of the file " dtoverlay=piscreen,speed=18000000,drm "
+
+(remove the double inverted commas "")
+
+4) Reboot
+
+5) sudo apt-get install xserver-xorg-input-evdev
+
+6) sudo mv /usr/share/X11/xorg.conf.d/10-evdev.conf /usr/share/X11/xorg.conf.d/45-evdev.conf
+
+7) sudo nano /usr/share/X11/xorg.conf.d/45-evdev.conf
+
+Add these lines at the end of the file
+
+"Section "InputClass"
+
+Identifier "evdev touchscreen catchall"
+
+MatchIsTouchscreen "on"
+
+MatchDevicePath "/dev/input/event*"
+
+Driver "evdev"
+
+Option "InvertX" "false"
+
+Option "InvertY" "true"
+
+EndSection"
+
+(remove the double inverted commas "")
+
+NOTE: if the touch input is still not working correctly , then play around with Option "InvertX" "false", Option "InvertY" "true" in the step 7 untill you get the desired result.
+
+8) sudo reboot
+
+9)sudo touch /etc/X11/xorg.conf.d/99-calibration.conf
+
+10)sudo apt-get install xinput-calibrator
+
+11) sudo reboot
+
+12) type this in the terminal : "DISPLAY=:0.0 xinput_calibrator"
+
+(remove the double inverted commas "")
+
+Calibration software will run and will be visible on the screen, press the 4 markers to calibrate and the touch would become pretty accurate.
+
+This guide should also work if the LCD is just a plain blank white when you first connect the lcd to the rpi5.
