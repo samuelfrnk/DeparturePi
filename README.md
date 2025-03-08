@@ -49,7 +49,7 @@ Connecting the screen to the Pi was difficult. Many tutorials were not helpful. 
 
 1. [This script](Scripts/departureBoardWithMin.py) performs a request every 15 seconds and displays the departures in minutes (e.g., 5') until departure. 
 2. [This script](Scripts/departureBoardWithMin.py) performs a request every 30 seconds and displays the departures in timestamps (e.g., 18:30) until departure.
-
+2. [This script](Scripts/departureBoard2Stations.py) performs a request every 15 seconds and displays the departures in timestamps (e.g., 18:30) until departure. It enables the use of two stations parallel. This however requires to add two env variables 'STATION_ID_1' 'STATION_ID_2' into the cronjob.
 
 
 
